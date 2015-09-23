@@ -22,3 +22,10 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+// Order, checkout, download
+Route::post('/checkout', 'OrderController@checkout');
+ 
+Route::get('order/{orderId}', 'OrderController@viewOrder');
+Route::get('order', 'OrderController@index');
+Route::get('download/{orderId}/{filename}', 'OrderController@download');
+ 

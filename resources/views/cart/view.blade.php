@@ -59,10 +59,21 @@
                                 <span class="fa fa-shopping-cart"></span> Continue Shopping
                             </button>
                         </a></td>
-                    <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="fa fa-play"></span>
-                        </button></td>
+                    
+                    <td class="col-md-2">
+                            <form action="/checkout" method="POST">
+                                {!! csrf_field() !!}
+                                <script
+                                        src="http://checkout.stripe.com/checkout.js" class="stripe-button"
+                                        data-key="pk_test_p0QQDCeJQA7W9X9y0VP7QOz5"
+                                        data-amount="{{$total*100}}"
+                                        data-name="CODETutorial.IO"
+                                        data-description="Products"
+                                        data-image="/128x128.png"
+                                        data-locale="auto">
+                                </script>
+                            </form>
+                    </td>
                 </tr>
                 </tbody>
             </table>
