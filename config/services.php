@@ -16,8 +16,8 @@ return [
 
     'stripe' => [
         'model'  => App\User::class,
-        'key'    => 'pk_live_up1nIOL1qsrparxPBt0F5UjC',
-        'secret' => 'sk_live_HLRhLGiserDoh2mhSeJLosFA',
+        'key'    => 'pk_live_up1nIOL1qsr',
+        'secret' => 'sk_live_HLRhLGiser',
     ],
  
 
